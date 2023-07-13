@@ -1,0 +1,25 @@
+<div class="further-education">
+  
+    <h2>Further Education</h2>
+    <ul class="further-education-slider">
+      {%- for block in section.blocks -%}
+        {%- if block.settings.image != blank -%}
+      <li class="further-education__product">
+        <a href="{{ block.settings.link }}"  class="view-more-btn">
+        <div class="further-education__product-img">
+          <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}" />
+        </div>
+        <div class="further-education__product-info">
+          <p class="further-education__product-title">{{ block.settings.title }}</p>
+         
+         <p class="further-education__learn-more">{{ block.settings.text-link }}</p> 
+         
+        </div>
+        </a>
+      </li>
+      {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  
+</div>
+

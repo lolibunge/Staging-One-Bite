@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main": {
+      "type": "course-page",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

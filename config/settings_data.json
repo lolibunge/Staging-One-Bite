@@ -1,0 +1,1380 @@
+{
+  "current": {
+    "theme-primary-color": "#554d99",
+    "theme-secondary-color": "#554d99",
+    "heading-text-color": "#000000",
+    "body-text-color": "#6d6868",
+    "border-color": "#e3e3e3",
+    "body-background-color": "#ffffff",
+    "font_body": "roboto_n3",
+    "font_headings": "open_sans_n3",
+    "font_buttons": "open_sans_n7",
+    "featured-product-main": "",
+    "product_module_1": "none",
+    "product_module_2": "none",
+    "product-sale-goal-use": false,
+    "product-sale-goal-style": "gradient",
+    "product_sale_goal_button": "Pre-order",
+    "product_sale_goal_estimated_delivery_date": "Estimated delivery: April",
+    "product_goal_starting_quantity": "",
+    "product_goal": "",
+    "product_goal_use_quantity": false,
+    "product_sale_goal_date_time": "06\/21\/2017 15:00",
+    "social_default_image": "",
+    "social_facebook_url": "https:\/\/www.facebook.com\/OneBiteEvolution\/",
+    "social_twitter_url": "",
+    "social_google_url": "",
+    "social_pinterest_url": "",
+    "social_instagram_url": "https:\/\/www.instagram.com\/onebite_evolution\/",
+    "social_vimeo_url": "",
+    "social_youtube_url": "https:\/\/www.youtube.com\/channel\/UC_Vn4rO7WmCtxB9vx8VM0QA",
+    "social_rss_url": "https:\/\/www.onebite.com\/blogs\/news",
+    "enable_currency_converter": true,
+    "currency_display_format": "money_with_currency_format",
+    "currency_converter_currencies": "INR GBP CAD USD AUD EUR JPY",
+    "currency_converter_default": "USD",
+    "favicon": "shopify:\/\/shop_images\/OneBite_Favicon.png",
+    "checkout_header_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/OneBite_Evolution_logo_updated_1.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "large",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#ffffff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#000000",
+    "checkout_button_color": "#524c98",
+    "checkout_error_color": "#e32c2b",
+    "theme-primary-color-hover": "#0288b5",
+    "sections": {
+      "home-slideshow": {
+        "type": "home-slideshow",
+        "blocks": {
+          "1563910642397": {
+            "type": "slide",
+            "settings": {
+              "alignment": "center",
+              "text_style": "light",
+              "overlay_style": "gradient",
+              "overlay_opacity": 70,
+              "title": "The Perfect Record",
+              "subtitle": "OneBite allows the doctors to adjust the record after the bite material has set.   Thus saving time and materials and giving the doctors   the confidence of an accurate record.",
+              "cta": "Buy Now",
+              "url": "shopify:\/\/pages\/onebite"
+            }
+          },
+          "1563911157702": {
+            "type": "slide",
+            "settings": {
+              "alignment": "center",
+              "text_style": "light",
+              "overlay_style": "gradient",
+              "overlay_opacity": 70,
+              "title": "Accuracy",
+              "subtitle": "The universal, fully adjustable system that saves dentist time and provides the   highest quality communication to the lab.",
+              "cta": "",
+              "url": ""
+            }
+          },
+          "slide-2": {
+            "type": "slide",
+            "settings": {
+              "alignment": "center",
+              "text_style": "light",
+              "overlay_style": "gradient",
+              "overlay_opacity": 10,
+              "title": "",
+              "subtitle": "",
+              "cta": "",
+              "url": ""
+            }
+          },
+          "slide-1": {
+            "type": "slide",
+            "settings": {
+              "alignment": "center",
+              "text_style": "light",
+              "overlay_style": "gradient",
+              "overlay_opacity": 10,
+              "title": "",
+              "subtitle": "",
+              "cta": "Pre-order",
+              "url": ""
+            }
+          }
+        },
+        "block_order": [
+          "1563910642397",
+          "1563911157702",
+          "slide-2",
+          "slide-1"
+        ],
+        "settings": {
+          "enable": true,
+          "layout": "full-window",
+          "transition": "transition-fade",
+          "autoplay_speed": 5,
+          "autoplay": true
+        }
+      },
+      "home-alternating-content": {
+        "type": "home-alternating-content",
+        "disabled": true,
+        "blocks": {
+          "alternating-content-1": {
+            "type": "image",
+            "settings": {
+              "style": "light",
+              "title": "Try The OneBite System",
+              "text": "<p>With the OneBite system the doctor has the ability to adjust the record after the bite material has fully set. Giving the peace of mind that you have a quality record.<\/p>",
+              "button_text": "join the thousands of doctors",
+              "button_link": "shopify:\/\/products\/onebite"
+            }
+          }
+        },
+        "block_order": [
+          "alternating-content-1"
+        ],
+        "settings": {}
+      },
+      "home-product-focus": {
+        "type": "home-product-focus",
+        "disabled": true,
+        "blocks": {
+          "home-product-focus-3": {
+            "type": "feature",
+            "settings": {
+              "title": "Accuracy",
+              "text": "<p>The OneBite&nbsp;gives doctors the ability to capture the perfect record allowing you to have the peace of mind of complete accuracy.<\/p>",
+              "icon": "locate"
+            }
+          },
+          "home-product-focus-1": {
+            "type": "feature",
+            "settings": {
+              "title": "Movements",
+              "text": "<p>OneBite allows you to adjust both lateral and torque movements after the bite material has fully set giving&nbsp;the doctor the ability to&nbsp;fully capture the patients midline and horizontal line angles with no time restraint.<\/p>",
+              "icon": "refresh"
+            }
+          },
+          "home-product-focus-2": {
+            "type": "feature",
+            "settings": {
+              "title": "Save Time",
+              "text": "<p>Doctors only have to&nbsp;take one record with the OneBite verses three semi-accurate records with Benda brushes and q-tips. Saving&nbsp; both time and materials.<\/p>",
+              "icon": "time"
+            }
+          },
+          "home-product-focus-4": {
+            "type": "feature",
+            "settings": {
+              "title": "Less Remakes",
+              "text": "<p>The system provides highest quality communication to the lab which results in&nbsp;less costly repairs for the ceramist and doctor.<\/p>",
+              "icon": "checkmark-circle-outline"
+            }
+          }
+        },
+        "block_order": [
+          "home-product-focus-3",
+          "home-product-focus-1",
+          "home-product-focus-2",
+          "home-product-focus-4"
+        ],
+        "settings": {
+          "show_product_image": false,
+          "product": "",
+          "style": "default",
+          "title": "OneBite Features",
+          "subtitle": "The most accurate system on the market"
+        }
+      },
+      "home-text-columns-with-icons": {
+        "type": "home-text-columns-with-icons",
+        "disabled": true,
+        "blocks": {
+          "1541789695177": {
+            "type": "text_column",
+            "settings": {
+              "title": "Articulation",
+              "text": "<p>The OneBite System was designed to work with any articulator in the market. If the doctor chooses to take a facebow, the laboratory can mount the maxillary arch using the facebow provided. The OneBite will be the verification of the midline and horizontal line angles.<\/p>",
+              "button_text": "",
+              "button_link": "",
+              "icon": "exit"
+            }
+          },
+          "1541788592224": {
+            "type": "text_column",
+            "settings": {
+              "title": "Vital Information",
+              "text": "<p>1. To finalize the midline and horizontal line angles with the OneBite System, make sure to tighten the front knob.<\/p>\n<p>2. To lock the record, apply bite material to the sides of the knob and inside the middle of the knob.<\/p>\n<p>3. When you send the case to your laboratory make sure to seperate the midline bars from the arch so the record doesnt get damaged during shipping.<\/p>",
+              "button_text": "Buy Now",
+              "button_link": "shopify:\/\/products\/onebite",
+              "icon": "locate"
+            }
+          },
+          "text-column-3": {
+            "type": "text_column",
+            "settings": {
+              "title": "Communication",
+              "text": "<p>This record is essential to any cosmetic case. The laboratory will use the OneBite System to visualize and establish the final midline and horizontal line angles. The simple yet, essential record will provide not only the precision, but the confidence in the aesthetic team.<\/p>",
+              "button_text": "",
+              "button_link": "",
+              "icon": "mail-unread"
+            }
+          }
+        },
+        "block_order": [
+          "1541789695177",
+          "1541788592224",
+          "text-column-3"
+        ],
+        "settings": {
+          "style": "default",
+          "columns-per-row": 3,
+          "title": "Enhancing Dentistry",
+          "subtitle": ""
+        }
+      },
+      "home-testimonials": {
+        "type": "home-testimonials",
+        "disabled": true,
+        "blocks": {
+          "testimonial-1": {
+            "type": "testimonial",
+            "settings": {
+              "quote": "<p>You can&rsquo;t do anterior smile rehabilitations without the&nbsp;One Bite System.<\/p>",
+              "source": "Steve Markus",
+              "city": ""
+            }
+          },
+          "1542406851489": {
+            "type": "testimonial",
+            "settings": {
+              "quote": "<p>The OneBite System made my cases much better quality and saved me time messing with benda brushes. Highly recommend the system.<\/p>",
+              "source": "Dr. Frassier",
+              "city": ""
+            }
+          },
+          "1542330894823": {
+            "type": "testimonial",
+            "settings": {
+              "quote": "<p>OneBite! In Adhesive Restorations of the A-Z 2017 with Dr Johan Figueira.&nbsp;Great Instrument to improve the quality of our treatments. Thanks Juan Olivier!<\/p>",
+              "source": "Agustin Miranda",
+              "city": ""
+            }
+          },
+          "1542331109534": {
+            "type": "testimonial",
+            "settings": {
+              "quote": "<p>Thanks Juan Olivier and Luis Olivier. OneBite arrived. This is an excellent system. Soon OneBite Evolution!<\/p>",
+              "source": "Eduardo Del Angel",
+              "city": ""
+            }
+          },
+          "1542330803055": {
+            "type": "testimonial",
+            "settings": {
+              "quote": "<p>I am preparing for my lectures this coming year, thank you my friend for the OneBite System.<\/p>",
+              "source": "Dr. German Albertini",
+              "city": ""
+            }
+          }
+        },
+        "block_order": [
+          "testimonial-1",
+          "1542406851489",
+          "1542330894823",
+          "1542331109534",
+          "1542330803055"
+        ],
+        "settings": {
+          "style": "default",
+          "title": "Testimonials",
+          "subtitle": ""
+        }
+      },
+      "home-blog-posts": {
+        "type": "home-blog-posts",
+        "disabled": true,
+        "settings": {
+          "blog": "news-1",
+          "style": "light",
+          "posts-to-show": 3,
+          "title": "Blog posts",
+          "subtitle": ""
+        }
+      },
+      "pxs-announcement-bar": {
+        "type": "pxs-announcement-bar",
+        "settings": {
+          "show_announcement": false,
+          "announcement_home_only": false,
+          "announcement_text": "25% OFF HOLIDAY SALE",
+          "announcement_text_mobile": "25% OFF HOLIDAY SALE",
+          "announcement_link": "shopify:\/\/products\/onebite",
+          "announcement_color": "#000000",
+          "announcement_background": "#d9d1e8"
+        }
+      },
+      "general-social-feeds": {
+        "type": "general-social-feeds",
+        "settings": {}
+      },
+      "general-footer": {
+        "type": "general-footer",
+        "blocks": {
+          "1541727397434": {
+            "type": "menu",
+            "settings": {
+              "menu": "main-menu"
+            }
+          },
+          "1542763518915": {
+            "type": "menu",
+            "settings": {
+              "menu": "footer"
+            }
+          },
+          "1541788035175": {
+            "type": "social_media",
+            "settings": {}
+          },
+          "1544036483622": {
+            "type": "richtext",
+            "settings": {
+              "title": "CONTACT",
+              "text": "<p>1.866.668.2483<\/p>\n<p>admin@onebite.com<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1541727397434",
+          "1542763518915",
+          "1541788035175",
+          "1544036483622"
+        ],
+        "settings": {
+          "style": "default",
+          "enable_borders": true,
+          "payment_icons": true,
+          "show_logo": false
+        }
+      },
+      "general-header": {
+        "type": "general-header",
+        "settings": {
+          "menu": "onebite-menu",
+          "header_sticky": false,
+          "show_cart": true,
+          "drawer_social_icons": false
+        }
+      },
+      "general-newsletter": {
+        "type": "general-newsletter",
+        "settings": {
+          "enable": false,
+          "style": "default",
+          "title": "Newsletter",
+          "text": "<p>Invite customers to join your mailing list.<\/p>"
+        }
+      },
+      "template-collection": {
+        "type": "template-collection",
+        "settings": {
+          "products-per-page": 12,
+          "text_placement": "overlay",
+          "stock_overlay_show": false,
+          "stock-overlay-threshold": 5
+        }
+      },
+      "1542407047582": {
+        "type": "home-blog-posts",
+        "disabled": true,
+        "settings": {
+          "blog": "news",
+          "style": "light",
+          "posts-to-show": 3,
+          "title": "OneBite Publications",
+          "subtitle": ""
+        }
+      },
+      "template-article": {
+        "type": "template-article",
+        "settings": {
+          "show_share_buttons": true
+        }
+      },
+      "template-cart": {
+        "type": "template-cart",
+        "settings": {
+          "order_notes": false,
+          "show_shipping_calculator": false,
+          "shipping_calculator_default_country": "United States"
+        }
+      },
+      "1542821082445": {
+        "type": "home-image-with-text",
+        "disabled": true,
+        "settings": {
+          "style": "default",
+          "title": "Dental Technissian",
+          "text": "<p>We created a universal mounting table that has four degrees of freedom. This unique mounting table is fully magnet-ic and has interchangeable plates that will adapt to the center magnetic core.&nbsp;<\/p>\n<p><\/p>\n<p>We have developed some efficient and practical tools, with more spatial degrees of freedom and within our collective experience we created one kit specifically for the clinicians and one kit for the technicians.<\/p>",
+          "button_text": "",
+          "button_link": ""
+        }
+      },
+      "1542822087061": {
+        "type": "pxs-rich-text",
+        "disabled": true,
+        "blocks": {
+          "1542822087061-0": {
+            "type": "text",
+            "settings": {
+              "title": "",
+              "text": "",
+              "heading_size": "large",
+              "text_alignment": "left"
+            }
+          }
+        },
+        "block_order": [
+          "1542822087061-0"
+        ],
+        "settings": {
+          "width": "regular"
+        }
+      },
+      "1543438648948": {
+        "type": "pxs-rich-text",
+        "disabled": true,
+        "blocks": {
+          "1543438648948-0": {
+            "type": "text",
+            "settings": {
+              "title": "",
+              "text": "",
+              "heading_size": "large",
+              "text_alignment": "left"
+            }
+          }
+        },
+        "block_order": [
+          "1543438648948-0"
+        ],
+        "settings": {
+          "width": "regular"
+        }
+      },
+      "1544479800986": {
+        "type": "pxs-rich-text",
+        "disabled": true,
+        "blocks": {
+          "1544479800986-0": {
+            "type": "text",
+            "settings": {
+              "title": "BUY NOW",
+              "text": "<p><a href=\"\/products\/onebite\" title=\"OneBite\">Click&nbsp;HERE to explore the features of OneBite<\/a><\/p>",
+              "heading_size": "large",
+              "text_alignment": "center"
+            }
+          }
+        },
+        "block_order": [
+          "1544479800986-0"
+        ],
+        "settings": {
+          "width": "regular"
+        }
+      },
+      "1544661353512": {
+        "type": "home-alternating-content",
+        "disabled": true,
+        "blocks": {
+          "1544661353512-1": {
+            "type": "video",
+            "settings": {
+              "style": "light",
+              "title": "OneBite Protocol",
+              "text": "<p>This short video will explain the use of the OneBite System.<\/p>",
+              "button_text": "This is your call to action",
+              "button_link": "",
+              "video_url": "https:\/\/www.youtube.com\/watch?v=ZQ5f8RCd2kw"
+            }
+          }
+        },
+        "block_order": [
+          "1544661353512-1"
+        ],
+        "settings": {}
+      },
+      "1544661496055": {
+        "type": "home-alternating-content",
+        "disabled": true,
+        "blocks": {
+          "1544661496055-0": {
+            "type": "image",
+            "settings": {
+              "style": "default",
+              "title": "Try Out The OneBite System",
+              "text": "<p>OneBite's focus is to provide the highest quality communication from the practice to the lab to ensure&nbsp;peace of mind for the doctor and the perfect record for the technician to create a patients case.<\/p>",
+              "button_text": "Buy now",
+              "button_link": "shopify:\/\/products\/onebite"
+            }
+          }
+        },
+        "block_order": [
+          "1544661496055-0"
+        ],
+        "settings": {}
+      },
+      "1544740285140": {
+        "type": "home-image-with-text",
+        "settings": {
+          "style": "default",
+          "title": "Introducing The OneBite Evolution",
+          "text": "<p>The OneBite Evolution replaces the traditional facebow work ﬂow during the maxillary arch transfer to the articulator for analog or digital techniques.<\/p>",
+          "button_text": "",
+          "button_link": ""
+        }
+      },
+      "1544740785816": {
+        "type": "home-image-with-text",
+        "settings": {
+          "style": "light",
+          "title": "True Position of the Maxillary Arch",
+          "text": "",
+          "button_text": "",
+          "button_link": ""
+        }
+      },
+      "1552010372347": {
+        "type": "pxs-video",
+        "settings": {
+          "title": "OneBite Evolution Teaser",
+          "text": "<p><a href=\"\/pages\/onebite-evolution\" title=\"OneBite Evolution\">ENTER THE CUBE<\/a><\/p>",
+          "video": "https:\/\/www.youtube.com\/watch?v=XWvo8iHqRII",
+          "aspect_ratio": "16-9",
+          "autoplay": false,
+          "overlay_show": false,
+          "overlay_heading": "OneBite Evolution Teaser",
+          "overlay_text": "<p>Enhance your home page with a video that relates to your process, products, or story.<\/p>",
+          "overlay_header_position": "above-button",
+          "overlay_header_color": "#ffffff",
+          "overlay_color": "#000000",
+          "overlay_color_opacity": 51,
+          "overlay_image_position": "center-center",
+          "overlay_button_style": "primary"
+        }
+      },
+      "home-images-with-text": {
+        "type": "home-images-with-text",
+        "disabled": true,
+        "blocks": {
+          "images-with-text-1": {
+            "type": "image",
+            "settings": {
+              "title": "OneBite Case",
+              "text": "<p>This case was completed by utilizing the protocol of the OneBite System as a device to relate information to the laboratory.&nbsp;<\/p>"
+            }
+          },
+          "images-with-text-2": {
+            "type": "image",
+            "settings": {
+              "title": "OneBite Record",
+              "text": "<p>The final midline and horizontal line angle record being taken with the OneBite&nbsp;System.<\/p>"
+            }
+          },
+          "images-with-text-3": {
+            "type": "image",
+            "settings": {
+              "title": "Lab Communication",
+              "text": "<p>Once the record is in the laboratory the dental technician will base the&nbsp;midline and horizontal line angles&nbsp;off the high quality record provided.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "images-with-text-1",
+          "images-with-text-2",
+          "images-with-text-3"
+        ],
+        "settings": {
+          "style": "light",
+          "title": "",
+          "subtitle": "This system is universal and it works with several brands of articulators. Doctors are able to capture the record multiple ways such as Digital, Analog, CBCT, and Facial Scanner.    The Cube allows the Occlusal Bite Plate to freely move enabling the Doctor to Cap-ture the True Position of The Maxillary Arch.",
+          "alignment": "left"
+        }
+      },
+      "1552011648116": {
+        "type": "home-alternating-content",
+        "blocks": {
+          "1552011648116-0": {
+            "type": "image",
+            "settings": {
+              "style": "default",
+              "title": "Dental Clinician",
+              "text": "<p>This system is universal and it works with several brands of articulators. Doctors are able to capture the record multiple ways such as Digital, Analog, CBCT, and Facial Scanner.<\/p>\n<p>The Cube allows the Occlusal Bite Plate to freely move enabling the Doctor to Capture the True Position of The Maxillary Arch.<\/p>",
+              "button_text": "Replace your facebow",
+              "button_link": "shopify:\/\/pages\/onebite-evolution"
+            }
+          },
+          "1552011648116-2": {
+            "type": "image",
+            "settings": {
+              "style": "default",
+              "title": "Dental Technician",
+              "text": "<p>We created a universal mounting table that has four degrees of freedom. This unique mounting table is fully magnetic and has interchangeable plates that will adapt to the center magnetic core.&nbsp;<\/p>\n<p>We have developed some efficient and practical tools, with more spatial degrees of freedom and within our collective experience we created one kit specifically for the clinicians and one kit for the technicians.<\/p>",
+              "button_text": "Articulate in freedom",
+              "button_link": "shopify:\/\/pages\/onebite-evolution"
+            }
+          },
+          "1552012010895": {
+            "type": "image",
+            "settings": {
+              "style": "default",
+              "title": "Base Line",
+              "text": "<p>The Base Line will capture the ideal landmarks from&nbsp;the corner of the eye (right exocanthion) to the corner of the ear (right otobasion superius).<\/p>",
+              "button_text": "Meet us at the base line",
+              "button_link": "shopify:\/\/pages\/onebite-evolution"
+            }
+          }
+        },
+        "block_order": [
+          "1552011648116-0",
+          "1552011648116-2",
+          "1552012010895"
+        ],
+        "settings": {}
+      },
+      "1557268628596": {
+        "type": "home-image-with-text",
+        "settings": {
+          "style": "default",
+          "title": "Original OneBite System",
+          "text": "<p>The OneBite System allows the doctor to take one accurate midline and horizontal line angle record.&nbsp;In comparison to the 3&nbsp;records usually taken&nbsp;with a&nbsp;Benda brush or a q-tip. This system is for simple cases which is different from the OneBite Evolution&nbsp;that is for complex cases.<\/p>",
+          "button_text": "Buy Now",
+          "button_link": "shopify:\/\/products\/onebite"
+        }
+      },
+      "1557269426181": {
+        "type": "home-image-with-text",
+        "settings": {
+          "style": "default",
+          "title": "Universal Mounting",
+          "text": "<p>The original OneBite System is a universal system that can be mounted on any semi adjustable articulator.&nbsp;<\/p>\n<p><\/p>",
+          "button_text": "",
+          "button_link": ""
+        }
+      }
+    },
+    "content_for_index": [
+      "1544740285140",
+      "1544740785816",
+      "1542821082445",
+      "1552011648116",
+      "1552010372347",
+      "home-alternating-content",
+      "home-images-with-text",
+      "home-product-focus",
+      "home-text-columns-with-icons",
+      "1544661353512",
+      "1543438648948",
+      "1542822087061",
+      "1544479800986",
+      "1544661496055",
+      "home-testimonials",
+      "1557268628596",
+      "1542407047582",
+      "home-blog-posts",
+      "1557269426181"
+    ]
+  },
+  "presets": {
+    "Cool": {
+      "theme-primary-color": "#0381A2",
+      "theme-primary-color-hover": "#0288b5",
+      "theme-secondary-color": "#554d99",
+      "heading-text-color": "#000000",
+      "body-text-color": "#797676",
+      "border-color": "#e3e3e3",
+      "body-background-color": "#fff",
+      "font_body": "roboto_n3",
+      "font_headings": "open_sans_n3",
+      "font_buttons": "open_sans_n7",
+      "sections": {
+        "home-slideshow": {
+          "type": "home-slideshow",
+          "blocks": {
+            "slide-1": {
+              "type": "slide",
+              "settings": {
+                "alignment": "center",
+                "title": "Slideshow",
+                "subtitle": "Introduce customers to your shop with lifestyle imagery and product photography."
+              }
+            },
+            "slide-2": {
+              "type": "slide",
+              "settings": {
+                "alignment": "center",
+                "title": "Slideshow",
+                "subtitle": "Introduce customers to your shop with lifestyle imagery and product photography."
+              }
+            }
+          },
+          "block_order": [
+            "slide-1",
+            "slide-2"
+          ],
+          "settings": {
+            "enable": true,
+            "layout": "full-window",
+            "transition": "transition-fade",
+            "autoplay": true
+          }
+        },
+        "home-alternating-content": {
+          "type": "home-alternating-content",
+          "blocks": {
+            "alternating-content-1": {
+              "type": "image",
+              "settings": {
+                "style": "default",
+                "button_text": "This is your call to action",
+                "button_link": "shopify:\/\/collections"
+              }
+            },
+            "alternating-content-2": {
+              "type": "video",
+              "settings": {
+                "style": "light",
+                "button_text": "This is your call to action",
+                "button_link": "shopify:\/\/collections"
+              }
+            },
+            "alternating-content-3": {
+              "type": "image",
+              "settings": {
+                "style": "default",
+                "button_text": "This is your call to action",
+                "button_link": "shopify:\/\/collections"
+              }
+            }
+          },
+          "block_order": [
+            "alternating-content-1",
+            "alternating-content-2",
+            "alternating-content-3"
+          ],
+          "settings": {}
+        },
+        "home-product-focus": {
+          "type": "home-product-focus",
+          "blocks": {
+            "home-product-focus-1": {
+              "type": "feature",
+              "settings": {
+                "icon": "refresh"
+              }
+            },
+            "home-product-focus-2": {
+              "type": "feature",
+              "settings": {
+                "icon": "volume-high"
+              }
+            },
+            "home-product-focus-3": {
+              "type": "feature",
+              "settings": {
+                "icon": "battery-charging"
+              }
+            },
+            "home-product-focus-4": {
+              "type": "feature",
+              "settings": {
+                "icon": "microphone"
+              }
+            }
+          },
+          "block_order": [
+            "home-product-focus-1",
+            "home-product-focus-2",
+            "home-product-focus-3",
+            "home-product-focus-4"
+          ],
+          "settings": {
+            "show_product_image": true,
+            "style": "light",
+            "title": "Product focus",
+            "subtitle": "Highlight your product's finest features."
+          }
+        },
+        "home-images-with-text": {
+          "type": "home-images-with-text",
+          "blocks": {
+            "images-with-text-1": {
+              "type": "image",
+              "settings": {
+                "text": "<p>Say a bit about your brand, a specific product, or promotion.<\/p>"
+              }
+            },
+            "images-with-text-2": {
+              "type": "image",
+              "settings": {
+                "text": "<p>Display up to four images, each with their own unique heading and text.<\/p>"
+              }
+            },
+            "images-with-text-3": {
+              "type": "image",
+              "settings": {
+                "text": "<p>Offer customers a wealth of information while conserving valuable vertical space on your homepage.<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "images-with-text-1",
+            "images-with-text-2",
+            "images-with-text-3"
+          ],
+          "settings": {
+            "style": "default",
+            "alignment": "left"
+          }
+        },
+        "pxs-video": {
+          "type": "pxs-video",
+          "settings": {}
+        },
+        "home-text-columns-with-icons": {
+          "type": "home-text-columns-with-icons",
+          "blocks": {
+            "text-column-1": {
+              "type": "text_column",
+              "settings": {}
+            },
+            "text-column-2": {
+              "type": "text_column",
+              "settings": {}
+            },
+            "text-column-3": {
+              "type": "text_column",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "text-column-1",
+            "text-column-2",
+            "text-column-3"
+          ],
+          "settings": {
+            "style": "default",
+            "title": "Text columns with icons"
+          }
+        },
+        "home-testimonials": {
+          "type": "home-testimonials",
+          "blocks": {
+            "testimonial-1": {
+              "type": "testimonial",
+              "settings": {}
+            },
+            "testimonial-2": {
+              "type": "testimonial",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "testimonial-1",
+            "testimonial-2"
+          ],
+          "settings": {
+            "style": "default",
+            "title": "Testimonials"
+          }
+        },
+        "home-blog-posts": {
+          "type": "home-blog-posts",
+          "settings": {
+            "style": "light",
+            "posts-to-show": 3,
+            "title": "Blog posts"
+          }
+        },
+        "pxs-announcement-bar": {
+          "type": "pxs-announcement-bar",
+          "settings": {
+            "announcement_background": "#554d99"
+          }
+        },
+        "general-social-feeds": {
+          "type": "general-social-feeds",
+          "blocks": {
+            "widget-block-1": {
+              "type": "instagram",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "widget-block-1"
+          ],
+          "settings": {}
+        },
+        "general-footer": {
+          "type": "general-footer",
+          "settings": {
+            "style": "default",
+            "enable_borders": true
+          }
+        }
+      },
+      "content_for_index": [
+        "home-alternating-content",
+        "home-product-focus",
+        "home-images-with-text",
+        "pxs-video",
+        "home-text-columns-with-icons",
+        "home-testimonials",
+        "home-blog-posts"
+      ]
+    },
+    "Fresh": {
+      "theme-primary-color": "#857b58",
+      "theme-primary-color-hover": "#6f6850",
+      "theme-secondary-color": "#4e7f74",
+      "heading-text-color": "#191919",
+      "body-text-color": "#5e5e5e",
+      "border-color": "#e6e6e6",
+      "body-background-color": "#ffffff",
+      "font_body": "roboto_condensed_n3",
+      "font_headings": "playfair_display_n7",
+      "font_buttons": "roboto_n7",
+      "sections": {
+        "home-slideshow": {
+          "type": "home-slideshow",
+          "blocks": {
+            "slide-1": {
+              "type": "slide",
+              "settings": {
+                "alignment": "center",
+                "title": "Slideshow",
+                "subtitle": "Introduce customers to your shop with lifestyle imagery and product photography."
+              }
+            },
+            "slide-2": {
+              "type": "slide",
+              "settings": {
+                "alignment": "center",
+                "title": "Slideshow",
+                "subtitle": "Introduce customers to your shop with lifestyle imagery and product photography."
+              }
+            }
+          },
+          "block_order": [
+            "slide-1",
+            "slide-2"
+          ],
+          "settings": {
+            "enable": true,
+            "layout": "full-window",
+            "transition": "transition-slide",
+            "autoplay": false
+          }
+        },
+        "home-featured-collection": {
+          "type": "home-featured-collection",
+          "settings": {
+            "style": "default",
+            "products-per-row": 3,
+            "product-rows": 2,
+            "title": "Featured collection"
+          }
+        },
+        "home-alternating-content": {
+          "type": "home-alternating-content",
+          "blocks": {
+            "alternating-content-1": {
+              "type": "image",
+              "settings": {
+                "style": "default",
+                "button_text": "This is your call to action",
+                "button_link": "shopify:\/\/collections"
+              }
+            },
+            "alternating-content-2": {
+              "type": "video",
+              "settings": {
+                "style": "light",
+                "button_text": "This is your call to action",
+                "button_link": "shopify:\/\/collections"
+              }
+            },
+            "alternating-content-3": {
+              "type": "image",
+              "settings": {
+                "style": "default",
+                "button_text": "This is your call to action",
+                "button_link": "shopify:\/\/collections"
+              }
+            }
+          },
+          "block_order": [
+            "alternating-content-1",
+            "alternating-content-2",
+            "alternating-content-3"
+          ],
+          "settings": {}
+        },
+        "home-text-columns-with-icons": {
+          "type": "home-text-columns-with-icons",
+          "blocks": {
+            "text-column-1": {
+              "type": "text_column",
+              "settings": {}
+            },
+            "text-column-2": {
+              "type": "text_column",
+              "settings": {}
+            },
+            "text-column-3": {
+              "type": "text_column",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "text-column-1",
+            "text-column-2",
+            "text-column-3"
+          ],
+          "settings": {
+            "style": "default",
+            "title": "Text columns with icons"
+          }
+        },
+        "pxs-video": {
+          "type": "pxs-video",
+          "settings": {}
+        },
+        "home-testimonials": {
+          "type": "home-testimonials",
+          "blocks": {
+            "testimonial-1": {
+              "type": "testimonial",
+              "settings": {}
+            },
+            "testimonial-2": {
+              "type": "testimonial",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "testimonial-1",
+            "testimonial-2"
+          ],
+          "settings": {
+            "style": "default",
+            "title": "Testimonials"
+          }
+        },
+        "home-blog-posts": {
+          "type": "home-blog-posts",
+          "settings": {
+            "style": "light",
+            "posts-to-show": 3,
+            "title": "Blog posts"
+          }
+        },
+        "pxs-announcement-bar": {
+          "type": "pxs-announcement-bar",
+          "settings": {
+            "announcement_background": "#4e7f74"
+          }
+        },
+        "general-social-feeds": {
+          "type": "general-social-feeds",
+          "blocks": {
+            "widget-block-1": {
+              "type": "twitter",
+              "settings": {
+                "style": "gradient"
+              }
+            }
+          },
+          "block_order": [
+            "widget-block-1"
+          ],
+          "settings": {}
+        },
+        "general-footer": {
+          "type": "general-footer",
+          "settings": {
+            "style": "light",
+            "enable_borders": true,
+            "show_logo": true
+          }
+        }
+      },
+      "content_for_index": [
+        "home-featured-collection",
+        "home-alternating-content",
+        "home-text-columns-with-icons",
+        "pxs-video",
+        "home-testimonials",
+        "home-blog-posts"
+      ]
+    },
+    "Bold": {
+      "theme-primary-color": "#ea2931",
+      "theme-primary-color-hover": "#d1282f",
+      "theme-secondary-color": "#fd8311",
+      "heading-text-color": "#161a1c",
+      "body-text-color": "#7f7f7f",
+      "border-color": "#e3e3e3",
+      "body-background-color": "#ffffff",
+      "font_body": "source_sans_pro_n3",
+      "font_headings": "montserrat_n4",
+      "font_buttons": "source_sans_pro_n7",
+      "sections": {
+        "home-slideshow": {
+          "type": "home-slideshow",
+          "blocks": {
+            "slide-1": {
+              "type": "slide",
+              "settings": {
+                "alignment": "center",
+                "title": "Slideshow",
+                "subtitle": "Introduce customers to your shop with lifestyle imagery and product photography."
+              }
+            }
+          },
+          "block_order": [
+            "slide-1"
+          ],
+          "settings": {
+            "enable": true,
+            "layout": "full-width",
+            "transition": "transition-fade",
+            "autoplay": false
+          }
+        },
+        "home-alternating-content": {
+          "type": "home-alternating-content",
+          "blocks": {
+            "alternating-content-1": {
+              "type": "image",
+              "settings": {
+                "style": "default",
+                "button_text": "This is your call to action",
+                "button_link": "shopify:\/\/collections"
+              }
+            },
+            "alternating-content-2": {
+              "type": "video",
+              "settings": {
+                "style": "light",
+                "button_text": "This is your call to action",
+                "button_link": "shopify:\/\/collections"
+              }
+            },
+            "alternating-content-3": {
+              "type": "image",
+              "settings": {
+                "style": "default",
+                "button_text": "This is your call to action",
+                "button_link": "shopify:\/\/collections"
+              }
+            }
+          },
+          "block_order": [
+            "alternating-content-1",
+            "alternating-content-2",
+            "alternating-content-3"
+          ],
+          "settings": {}
+        },
+        "home-product-focus": {
+          "type": "home-product-focus",
+          "blocks": {
+            "home-product-focus-1": {
+              "type": "feature",
+              "settings": {
+                "icon": "refresh"
+              }
+            },
+            "home-product-focus-2": {
+              "type": "feature",
+              "settings": {
+                "icon": "volume-high"
+              }
+            },
+            "home-product-focus-3": {
+              "type": "feature",
+              "settings": {
+                "icon": "battery-charging"
+              }
+            },
+            "home-product-focus-4": {
+              "type": "feature",
+              "settings": {
+                "icon": "microphone"
+              }
+            }
+          },
+          "block_order": [
+            "home-product-focus-1",
+            "home-product-focus-2",
+            "home-product-focus-3",
+            "home-product-focus-4"
+          ],
+          "settings": {
+            "show_product_image": true,
+            "style": "light",
+            "title": "Product focus",
+            "subtitle": "Highlight your product's finest features."
+          }
+        },
+        "home-images-with-text": {
+          "type": "home-images-with-text",
+          "blocks": {
+            "images-with-text-1": {
+              "type": "image",
+              "settings": {
+                "text": "<p>Say a bit about your brand, a specific product, or promotion.<\/p>"
+              }
+            },
+            "images-with-text-2": {
+              "type": "image",
+              "settings": {
+                "text": "<p>Display up to four images, each with their own unique heading and text.<\/p>"
+              }
+            },
+            "images-with-text-3": {
+              "type": "image",
+              "settings": {
+                "text": "<p>Offer customers a wealth of information while conserving valuable vertical space on your homepage.<\/p>"
+              }
+            }
+          },
+          "block_order": [
+            "images-with-text-1",
+            "images-with-text-2",
+            "images-with-text-3"
+          ],
+          "settings": {
+            "style": "default",
+            "alignment": "right"
+          }
+        },
+        "home-text-columns-with-icons": {
+          "type": "home-text-columns-with-icons",
+          "blocks": {
+            "text-column-1": {
+              "type": "text_column",
+              "settings": {}
+            },
+            "text-column-2": {
+              "type": "text_column",
+              "settings": {}
+            },
+            "text-column-3": {
+              "type": "text_column",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "text-column-1",
+            "text-column-2",
+            "text-column-3"
+          ],
+          "settings": {
+            "style": "light",
+            "title": "Text columns with icons"
+          }
+        },
+        "pxs-video": {
+          "type": "pxs-video",
+          "settings": {}
+        },
+        "home-testimonials": {
+          "type": "home-testimonials",
+          "blocks": {
+            "testimonial-1": {
+              "type": "testimonial",
+              "settings": {}
+            },
+            "testimonial-2": {
+              "type": "testimonial",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "testimonial-1",
+            "testimonial-2"
+          ],
+          "settings": {
+            "style": "default",
+            "title": "Testimonials"
+          }
+        },
+        "home-blog-posts": {
+          "type": "home-blog-posts",
+          "settings": {
+            "style": "light",
+            "posts-to-show": 2,
+            "title": "Blog posts"
+          }
+        },
+        "pxs-announcement-bar": {
+          "type": "pxs-announcement-bar",
+          "settings": {
+            "announcement_background": "#fd8311"
+          }
+        },
+        "general-header": {
+          "type": "general-header",
+          "settings": {
+            "header_sticky": true
+          }
+        },
+        "general-social-feeds": {
+          "type": "general-social-feeds",
+          "blocks": {
+            "widget-block-1": {
+              "type": "instagram",
+              "settings": {}
+            },
+            "widget-block-2": {
+              "type": "twitter",
+              "settings": {
+                "style": "light"
+              }
+            }
+          },
+          "block_order": [
+            "widget-block-1",
+            "widget-block-2"
+          ],
+          "settings": {}
+        },
+        "general-footer": {
+          "type": "general-footer",
+          "settings": {
+            "style": "default",
+            "enable_borders": true,
+            "show_logo": true
+          }
+        }
+      },
+      "content_for_index": [
+        "home-alternating-content",
+        "home-product-focus",
+        "home-images-with-text",
+        "home-text-columns-with-icons",
+        "pxs-video",
+        "home-testimonials",
+        "home-blog-posts"
+      ]
+    }
+  }
+}

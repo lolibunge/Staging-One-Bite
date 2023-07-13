@@ -1,0 +1,195 @@
+{% layout none %}
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+    <div class="module module-product">
+    <div class="product-slideshow clearfix">
+      <div class="product-image-container clearfix">
+        <div class="product-big-image">
+          <img src="{{ product.featured_image | img_url:'master' }}" alt="{{ product.featured_image.alt }}" />
+        </div>
+      </div>
+    </div>
+    <div class="product-wrap">
+      <div class="product-details">
+        <p class="modal-type">{{ product.type }}</p>
+      <p class="modal-vendor">{{ product.vendor }}</p>
+      <h3 class="modal-title">{{ product.title }}</h3>
+      </div>
+
+     <form method="post" action="/cart/add" id="add-to-cart-form">
+        <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+       
+        <div class="product-options">
+
+          <div class="select-option__wrapper">
+            {%- for option in product.options_with_values -%}
+          <label class="selected-text" for="ProductSelect-{{ product.id }}" data-select-text="">
+            <strong>{{ option.name | escape }}: </strong> 
+            <span data-selected-option="">{{ value }}</span>
+          </label>
+        {% endfor %}
+         <select name="id" id="ProductSelect-{{ product.id }}" class="product-form__variants no-js single-option-selector">
+          {% for variant in product.variants %}
+            {% if variant.available %}
+              <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
+                {{ variant.title }}
+              </option>
+            {% else %}
+              <option disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
+            {% endif %}
+          {% endfor %}
+          </select>
+            
+          </div>
+       
+        <div class="number-input-wrapper product-quantity clearfix">
+              <div class="number-input-field">
+                <input type="number" name="quantity" id="quantity" value="1" aria-label="{{ "general.general.quantity" | t }}" />
+                <label class="number-input-label" for="quantity">{{ 'general.general.quantity' | t }}</label>
+              </div>
+              <div class="number-input-nav">
+                <div class="number-input-nav-item icon icon-plus"></div>
+                <div class="number-input-nav-item icon icon-minus"></div>
+              </div>
+            </div>
+        </div>
+        
+      <div class="product-form__item product-form__item--submit{% if section.settings.enable_payment_button %} product-form__item--payment-button{% endif %}{% if product.has_only_default_variant %} product-form__item--no-variants{% endif %}">
+        <button type="submit" name="add" id="AddToCart-{{ section.id }}" {% unless current_variant.available %}disabled="disabled"{% endunless %} class="button add-to-cart-button inverse">
+          <span id="AddToCartText-{{ section.id }}">
+            {% unless current_variant.available %}
+              {{ 'products.product.sold_out' | t }}
+            {% else %}
+              {{ 'products.product.add_to_cart' | t }}
+            {% endunless %}
+          </span>
+        </button>
+        {% if section.settings.enable_payment_button %}
+          {{ form | payment_button }}
+        {% endif %}
+      </div>
+        
+      </form>
+
+      {% if product.description != blank and is_featured != true %}
+        <div class="product-tabs">
+          <div class="product-tabs-header">
+            <div class="product-tabs-header-item active" data-tab="product-tab-description">
+              {{ "products.product.description" | t }}
+            </div>
+          </div>
+          <div class="product-tabs-body">
+            <div class="product-tabs-body-item rte active" id="product-tab-description">
+              {{ product.description }}
+            </div>
+          </div>
+        </div>
+      {% endif %}      
+    </div>
+  </div>
+      
+            
+<style>
+/* MODAL */
+
+#productModal .module.module-product {
+    padding: 0px 0!important;
+}
+
+#productModal img {
+  height:350px;
+}
+
+  #productModal .product-slideshow {
+    height: 100%;
+}
+  #productModal  .product-image-container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+  .modal {
+   display: none;
+    position: fixed;
+    z-index: 999999;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .modal.active {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+  .modal-box{
+        position: relative;
+    margin: 0px auto;
+    padding: 50px;
+    width: 100%;
+    max-width: 1300px;
+    top: 0%;
+    z-index: 999;
+  }
+  
+  .modal-content{
+    display: flex;
+  }
+
+  .modal-content .right-column {
+    width: 50%;
+    margin-left: 7%;
+  }
+
+  
+  .modal-content .left-column {
+    width: 50%;
+  }
+
+
+  
+  
+  .close {
+    color: #aaa;
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    padding: 0.9375rem;
+    font-size: 24px;
+    z-index: 9;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  
+  .product-options {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.select-option__wrapper {
+    display: flex;
+    padding: 15px 10px;
+    border: 1px solid #e3e3e3;
+    align-items: center;
+    border-radius: 3px;
+    margin-right: 15px;
+}
+
+.single-option-selector {
+    border: none;
+}
+   
+</style>

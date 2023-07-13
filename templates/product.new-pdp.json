@@ -1,0 +1,61 @@
+{
+  "sections": {
+    "main": {
+      "type": "rebl-template-product",
+      "settings": {
+        "enable_zoom": true,
+        "show_spb": false,
+        "enable_cart_redirect": false,
+        "enable-share-buttons": true,
+        "calendly-description": "<p>{{ product.metafields.custom.calendly_description.value.description | metafield_tag }}<\/p>",
+        "additional_info_text_1": "",
+        "additional_info_url_1": "",
+        "additional_info_icon_1": "info",
+        "additional_info_text_2": "",
+        "additional_info_url_2": "",
+        "additional_info_icon_2": "info"
+      }
+    },
+    "a12af894-cb21-49d8-bab8-7fac5854a693": {
+      "type": "rebl-consumables",
+      "settings": {
+        "consumables": true
+      }
+    },
+    "9374f81e-bcb2-4804-890d-8cd487ce9858": {
+      "type": "rebl-further-education",
+      "blocks": {
+        "6b63ba82-4d22-42a8-ae4c-dceb6d5578c8": {
+          "type": "slide",
+          "settings": {
+            "title": "In-Office",
+            "image": "shopify:\/\/shop_images\/In-OfficeTechnicianSystem.jpg",
+            "text-link": "Learn More",
+            "link": "shopify:\/\/pages\/in-office-training"
+          }
+        },
+        "750432d2-1f3b-4604-87c2-eba3f735706e": {
+          "type": "slide",
+          "settings": {
+            "title": "Hands On",
+            "image": "shopify:\/\/shop_images\/Hands-OnBoth.jpg",
+            "text-link": "Learn More",
+            "link": "shopify:\/\/pages\/courses"
+          }
+        }
+      },
+      "block_order": [
+        "6b63ba82-4d22-42a8-ae4c-dceb6d5578c8",
+        "750432d2-1f3b-4604-87c2-eba3f735706e"
+      ],
+      "settings": {
+        "further-education": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "a12af894-cb21-49d8-bab8-7fac5854a693",
+    "9374f81e-bcb2-4804-890d-8cd487ce9858"
+  ]
+}

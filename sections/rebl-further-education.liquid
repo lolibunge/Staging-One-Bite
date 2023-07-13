@@ -1,0 +1,87 @@
+{% if section.settings.further-education %}
+  {% render 'rebl-further-education' %}
+{% endif %}
+
+<div class="further-education">
+  {%- if section.blocks.settings.image != blank -%}
+    <h2>Further Education</h2>
+    <ul class="further-education-slider">
+      {%- for block in section.blocks -%}
+        {{ block }}
+      <li class="further-education__product">
+        <a href="{{ block.settings.link }}"  class="view-more-btn">
+        <div class="further-education__product-img">
+          <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}" />
+        </div>
+        <div class="further-education__product-info">
+          <p class="further-education__product-title">{{ block.settings.title }}</p>
+         
+         <p class="further-education__learn-more">{{ block.settings.text-link }}</p> 
+         
+        </div>
+        </a>
+      </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+</div>
+
+
+{% schema %}
+  {
+    "name": "Further Education",
+    "settings": [
+      {
+        "type":"header",
+        "content":"Show Further Education"
+      },
+      {
+        "type":"checkbox",
+        "id":"further-education",
+        "label":"click to show or hide Further Educations",
+        "default":true
+      }
+    ],
+    "blocks":[
+      {
+        "type": "slide",
+        "name": "Slide",
+        "limit": 2,
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "text-link",
+            "label": "Text Link"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }
+    ],
+  "presets": [
+    {
+      "category": "Further Education",
+      "name": "Further Education"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

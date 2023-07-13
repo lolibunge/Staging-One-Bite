@@ -1,0 +1,161 @@
+{{ 'https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js' | script_tag }}
+{{ 'https://unpkg.com/flickity@2.3.0/dist/flickity.css' | stylesheet_tag }}
+
+<style>
+
+.page {
+  width: 100%; /* full width */
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.pages.is-fullscreen .page {
+  height: 100%;
+}
+
+.page img {
+  display: block;
+  max-height: 100%;
+} 
+
+.course{
+  display: block;
+  margin: 10px 0;
+}
+
+.courses h2{
+  display: flex;
+  justify-content: center;
+}
+
+.back{
+  margin: auto;
+  display: flex;
+  width: min-content;
+  white-space: nowrap;
+  justify-content: center;
+}
+
+  .back svg{
+    width: 15px;
+    margin-right: 15px; 
+  }
+  .courses.page-width h2 {
+    font-size: 30px;
+}
+
+  .courses.page-width {
+    max-width: 800px;margin: auto;
+  }
+</style>
+
+
+<div class="courses page-width">
+  <h2></h2>
+
+  <p>Join us at one of our courses for a full day immersive learning experience amongst like-minded professionals, led by our training and education team. Learn the importance of  taking the true position of the maxillary arch with OneBite Evolution. This course will cover philosophy, protocols, and hands-on training. This course will also include instructions on how to use the OneBite Evolution system in both analog and digital methods.</p>
+  
+  <div class="pages">
+    <div class="page" title="Select a city"></div>
+    <div class="page" title="Select a course"></div>
+  </div>
+
+  <a class="back btn btn--secondary btn--has-icon-before return-link button inverse" href="#">
+    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 20 8"><path d="M4.814 7.555C3.95 6.61 3.2 5.893 2.568 5.4 1.937 4.91 1.341 4.544.781 4.303v-.44a9.933 9.933 0 0 0 1.875-1.196c.606-.485 1.328-1.196 2.168-2.134h.752c-.612 1.309-1.253 2.315-1.924 3.018H19.23v.986H3.652c.495.632.84 1.1 1.036 1.406.195.306.485.843.869 1.612h-.743z" fill="#fff" fill-rule="evenodd"></path></svg>
+    go back</a>
+
+</div>
+
+<script>
+
+
+    var flkty = new Flickity( '.pages', {
+      selectedAttraction: 0.05,
+      friction: 0.8,
+      prevNextButtons: false,
+      pageDots: false
+});
+  
+let page=1;
+const productTypes = 'virtual training,hand on courses,in-office training'.split(',');
+const continents = 'america'.split(',');
+const countries = 'united states'.split(',');
+const cities = 'north carolina'.split(',');
+  
+const products = [];
+
+  // {{collections['courses'].title}}
+  {% for product in collections['courses'].products %}
+    products.push(['{{ product.title }}', '/products/{{ product.handle }}']);
+  {% endfor %}
+
+const $courses = document.querySelector('.courses');
+const $pages = $courses.querySelector('.pages');
+const $title = $courses.querySelector('h2');
+const $back = $courses.querySelector('.back');
+
+
+const renderPageContents = (page, items) => {
+  const $page = $pages.querySelectorAll('.page')[page-1];
+  const nextPage = page+1;
+  $title.innerHTML = $page.getAttribute('title');
+  if (page == 2) {
+    $page.innerHTML = items.map(item=>`<button class="btn course button" onclick="window.open('${item[1]}', '_self')">${item[0]}</button>`).join('')
+  } else {
+    $page.innerHTML = items.map(item=>`<button class="btn course button" onclick=goToPage(${nextPage})>${item}</button>`).join('')
+  }
+  
+}
+
+const goBack = () => {
+  if (page > 1) goToPage(page-1);
+}
+
+const getItemsByPage = (page) => {
+
+  switch(page){
+    case 1:
+      return cities;
+      break;
+    case 2:
+      return products;
+      break;
+    // case 4:
+    //   return products;
+    //   break;
+  }
+  
+}
+
+const goToPage = (toPage) => {
+  if (toPage<1) return;
+  page = toPage;
+  renderPageContents(toPage, getItemsByPage(toPage));
+  flkty.select(toPage-1);
+}
+
+
+$back.addEventListener(
+  'click',
+  goBack
+)
+
+goToPage(1);
+  
+</script>
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": []
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,195 @@
+
+
+<div class="product-recommendations" data-product-id="{{ product.id }}" data-limit="4">
+  {%- if product.metafields.global.consumables.value != blank -%}
+    <h2>Consumables</h2>
+    <ul class="slider">
+      {%- for recommended_product in product.metafields.global.consumables.value -%}
+      <li class="product-recommendations__product">
+        <a href="#"  class="view-more-btn" data-handle="{{ recommended_product.handle }}" data-collection="{{ recommended_product.tags }}">
+        <div class="product-recommendations__product-img">
+          <img src="{{ recommended_product.featured_image | img_url: 'master' }}" alt="{{ recommended_product.featured_image.alt }}" />
+        </div>
+        <div class="product-recommendations__product-info">
+          <p class="product-recommendations__product-title">{{ recommended_product.title }}</p>
+          <p class="product-recommendations__product-price">{{ recommended_product.price | money }}</p>
+         
+         <p class="product-recommendations__learn-more">Learn more</p> 
+         
+        </div>
+        </a>
+      </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+</div>
+
+<div id="productModal" class="modal">
+  <div class="modal-box">
+    <span class="close">&times;</span>
+    <div class="modal-content"></div>
+  </div>
+</div>
+
+<script>
+ 
+// $('.slider').slick({
+//   	slidesToShow: 4,
+//     slidesToScroll: 1,
+//    arrows: true,
+//     draggable: false,
+//     infinite: true,
+//     autoplay: false,
+//   centerMode: true,
+//   responsive: [
+//     {
+//       breakpoint: 768,
+//       settings: {
+//         arrows: false,
+//         centerMode: true,
+//         slidesToShow: 3
+//       }
+//     },
+//     {
+//       breakpoint: 480,
+//       settings: {
+//         arrows: false,
+//         draggable: true,
+//         centerMode: true,
+//         dots: true,
+//         slidesToShow: 2
+//       }
+//     }
+//   ]
+// });
+    
+  
+document.querySelectorAll('.view-more-btn').forEach(
+  $button => {
+    $button.addEventListener(
+      'click',
+      () => {
+        const handle = $button.getAttribute('data-handle');
+        const collection = $button.getAttribute('data-collection');
+
+        const $modal = document.querySelector('#productModal');
+        const $modalContent = $modal.querySelector('.modal-content');
+        const $closeButton = $modal.querySelector('.close');
+        const $mainContent = document.querySelector('.main-content');
+        
+        $modal.classList.add('active');
+        $mainContent.classList.add('less-index');
+
+        fetch(`/collections/${collection}/products/${handle}?view=modal`)
+          .then(response => response.text())
+          .then(content => $modalContent.innerHTML = content);
+
+        console.log(handle);
+        console.log(collection);
+        
+        const closeModal = () => {
+          $modal.classList.remove('active');
+          $mainContent.classList.remove('less-index');
+        };
+        
+        $closeButton.addEventListener('click', () => {
+          closeModal();
+        });
+
+        // Close modal when clicking outside .modal-content
+        window.addEventListener('click', event => {
+          if (event.target === $modal) {
+            closeModal();
+          }
+        });
+      }
+    )
+  }
+);
+
+</script>
+
+<style>
+  .slick {
+      position: relative;
+    }
+
+    .slick-prev,
+    .slick-next {
+      position: absolute;
+      top: 50%;
+      z-index: 1;
+    }
+
+    .slick-prev {
+      left: -30px;
+    }
+
+    .slick-next {
+      right: -30px;
+    }
+
+.slick-prev:before, .slick-next:before {
+    
+    color: #080808;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+  .slick-slide img {
+      width: 200px;
+    }
+
+  @media screen and (max-width:480px){
+    .product-recommendations {
+        max-width: unset;
+      width: 100%;
+    }
+    .slick-slide img {
+        width: 100%;
+    }
+    .product-recommendations__product-info {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+/* MODAL */
+    main.main-content.less-index {
+      z-index: 9999;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .close-modal {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  @media screen and (max-width:480px){
+    .module.module-product {
+        display: flex;
+        flex-direction: column;
+    }
+  }
+</style>

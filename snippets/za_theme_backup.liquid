@@ -1,0 +1,101 @@
+<!doctype html>
+<html class="no-js" lang="{{ shop.locale }}">
+
+<head>
+<!-- ROIHunterEasy HeadSnippet start -->{% include 'roi_hunter_easy_head_snippet' %}<!-- ROIHunterEasy HeadSnippet end -->
+
+  <script>
+(function(i,s,o,g,r,a,m){
+  i['GoogleAnalyticsObject']=r;
+  i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},
+  i[r].l=1*new Date();
+  a=s.createElement(o),m=s.getElementsByTagName(o)[0];
+  a.async=1;
+  a.src=g;
+  m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-129889345-1', 'auto');
+ga('send', 'pageview');
+</script>
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0020/9321/9921/products/Nose_Extender_Plain_2048x2048.jpg?v=1542748172" />
+
+  <meta name="google-site-verification" content="vbY71t1JLy2TWVEeQE1TL6OOH5nqRJ-lFW8oojmZR84" />
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  {% assign tab_index = 0 %}
+
+  {% include 'SEOManager' %}
+
+  {% include 'favicon' %}
+
+  <link rel="canonical" href="{{ canonical_url }}" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  {{ content_for_header }}
+
+  {% include 'bold-common' %}
+
+
+  {% assign twitter_handle = settings.social_twitter_url | split: 'twitter.com/' | last %}
+  {%
+    include 'social-meta-tags',
+    twitter_handle: twitter_handle
+  %}
+
+  {% include 'scripts-styles-header' %}
+
+  {% include 'shogun-head' %}
+<!--Gem_Page_Header_Script-->
+{% include 'gem-app-header-scripts' %}
+<!--End_Gem_Page_Header_Script-->
+
+	{% include 'gsc-script' %} 
+  {% include "loyaltylion" %}
+</head>
+
+{% include 'additional-classes' %}
+<body class="{{ bodyClasses }}">
+<!-- ROIHunterEasy BodySection start -->{{ 'roi_hunter_easy_body_section.js' | asset_url | script_tag }}<!-- ROIHunterEasy BodySection end -->
+
+  {% section 'pxs-announcement-bar' %}
+
+  {% section 'general-header' %}
+
+  <main class="main-content">
+
+    {% unless template contains 'index' or fullBleed %}
+      {% unless template contains 'slideshow' and settings.product-slideshow-layout == 'full-width' %}
+        {% include 'breadcrumbs' %}
+      {% endunless %}
+    {% endunless %}
+
+    {{ content_for_layout }}
+  </main>
+
+  {% section 'general-newsletter' %}
+
+  {% section 'general-social-feeds' %}
+
+  {% section 'general-footer' %}
+
+  {% include 'scripts-styles-footer' %}
+
+  {% include 'structured-data' %}
+
+<!-- Delete the Beeketing script below after uninstalling Happy Messenger app to remove it from your theme. For more info, read here: https://bit.ly/hmesscode or contact us at hi@beeketing.com. --><!-- BEEKETINGSCRIPT CODE START -->{% include 'bk-tracking' %}<!-- BEEKETINGSCRIPT CODE END --><!--Gem_Page_Footer_Script-->
+{% include 'gem-app-footer-scripts' %}
+<!--End_Gem_Page_Footer_Script-->
+{% include 'booster-discounts' %}
+ 
+
+
+<!-- Added by Sticky Cart by Uplinkly -->
+{% include 'sticky-cart-by-uplinkly' %}
+ 
+
+ {% include 'smile-initializer' %}
+
+</body>
+</html>

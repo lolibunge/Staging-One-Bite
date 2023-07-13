@@ -1,0 +1,140 @@
+<!--------------Exit-Offer----------------><span id='rex_exit_pupup_id'><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- include jquery -->
+<script type="text/javascript">
+
+    function isMobileRx() {
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            return true;
+        }
+
+        return false;
+    }
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i <ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    function setCookie(cname, cvalue, exhours) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exhours*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    function loadScript(url, callback){
+        var script = document.createElement("script")
+        script.type = "text/javascript";
+
+        if (script.readyState){  //IE
+            script.onreadystatechange = function(){
+                if (script.readyState == "loaded" ||
+                    script.readyState == "complete"){
+                    script.onreadystatechange = null;
+                    callback();
+                }
+            };
+        } else {  //Others
+            script.onload = function(){
+                callback();
+            };
+        }
+
+        script.src = url;
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+
+    setTimeout(function(){
+        loadScript("https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js", function(){
+            //initialization code
+        });
+    }, 1000);
+
+    setTimeout(function(){
+        loadScript("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", function(){
+            //initialization code
+        });
+    }, 1500);
+
+
+    setTimeout(function () {
+        var exitPage = false;
+        var showed = false;
+        var rexPopupCookieKey = 'rex_popup_offer_1545254357';
+        var rexPopupValue = getCookie(rexPopupCookieKey);
+        console.log(rexPopupValue);
+
+        $(window).on("mousemove",function(event) {
+            if (!isMobileRx()) {
+                var scrollTopV = $(document).scrollTop();
+                var mouseY = event.pageY - scrollTopV;
+
+                var isAddedCartValid = true;
+                                if (mouseY < 15) {
+                    if (!showed && !rexPopupValue && isAddedCartValid) {
+                        exitPage = true;
+                        showed = true;
+                        $('#xmyModal').click();
+
+                        setCookie(rexPopupCookieKey, 1, 6);
+                    }
+                } else {
+                    exitPage = false;
+                }
+            }
+        });
+
+        if (isMobileRx()) {
+            if (!rexPopupValue) {
+                $('#xmyModal').click();
+                setCookie(rexPopupCookieKey, 1, 6);
+            }
+        }
+
+    }, 12000);
+</script>
+<style>
+    #myModal *{
+        box-shadow: none;
+        border: none;
+    }
+    .modal-body img{
+        max-width: 100%!important;
+    }
+</style>
+
+<button style="display: none" type="button" class="btn btn-info btn-lg" id="xmyModal" data-toggle="modal" data-target="#myModal">Open Modal</button>
+<div style="background: none!important;" id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog" style="">
+
+        <!-- Modal content-->
+        <div class="modal-content" style="background: none; padding-top: 30px">
+            <button type="button" class="close" data-dismiss="modal" style=" top: -10px; color: white; position: relative; z-index: 5">&times;</button>
+            <div class="modal-body">
+                <div id="rex-ap-pop-id" style="float: left; width: 100%; text-align: center; background:#000000;color: white; padding: 30px 25px; border-radius: 5px;">
+<div>
+<h1><span style="font-family:comic sans ms,cursive">We have a gift for you</span></h1>
+
+<h4><span style="font-family:comic sans ms,cursive">Get 10% off your order by applying the discount code below</span></h4>
+&nbsp;
+
+<h1><u><span style="font-family:comic sans ms,cursive"><em>SHOPNOW247</em></span></u></h1>
+</div>
+</div>
+            </div>
+        </div>
+
+    </div>
+</div></span>

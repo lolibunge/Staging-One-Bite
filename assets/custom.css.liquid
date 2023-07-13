@@ -1,0 +1,407 @@
+/* Main content z-index for modal view */
+
+.main-content {
+/*     z-index: 999; */
+}
+
+/* Customize Collection for courses */
+
+.kit-collection .collection-list {
+    width: 40%;
+    margin-top: 30px;
+    margin: 30px auto 0;
+}
+
+.kit-collection img.list-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.kit-collection  .list-text-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all 0.2s cubic-bezier(0, 0, 0, 0.94);
+    transition: all 0.2s cubic-bezier(0, 0, 0, 0.94);
+}
+
+.kit-collection .list-title {
+    color: #ffffff;
+}
+
+.kit-collection .list-meta {
+    color: #ffffff;
+}
+
+@media screen and (max-width:768px){
+  .kit-collection .collection-list {
+      width: 70%;
+  }
+  .kit-collection .list-text-wrapper {
+      position: unset;
+      top: unset;
+      background: unset;
+      opacity: 1;
+  }
+  .kit-collection .list-title, .kit-collection .list-meta {
+      color: #000;
+  }
+}
+/* ----------------- PRODUCT PAGE ---------------- */
+/* Social Share */
+.share-buttons-item {
+    position: relative;
+    float: left;
+    width: unset;
+    font-size: 0;
+    color: #6d6868;
+    text-align: center;
+    border: none;
+    border-left-width: 0;
+    background-color: transparent;
+}
+.product-wrap .share-buttons-item:before {
+    border: 1px solid #e8e9eb;
+    padding: 15px 30px;
+    border-radius: 20px;
+}
+
+.share-buttons.no-count {
+    display: flex;
+    justify-content: space-between;
+}
+.share-facebook:hover {
+    background-color: unset;
+    border-color: unset;
+}
+.share-facebook:hover:before {
+    background-color: #49659d;
+    border-color: #49659d;
+}
+.share-twitter:hover {
+    background-color: unset;
+    border-color: unset;
+}
+.share-twitter:hover:before {
+    background-color: #09aeec;
+    border-color: #09aeec;
+}
+.share-pinterest:hover {
+    background-color: unset;
+    border-color: unset;
+}
+.share-pinterest:hover:before {
+    background-color: #cb1f2a;
+    border-color: #cb1f2a;
+}
+.share-fancy:hover {
+    background-color: unset;
+    border-color: unset;
+}
+.share-fancy:hover:before {
+    background-color: #49659d;
+    border-color: #49659d;
+}
+.share-google:hover {
+    background-color: unset;
+    border-color: unset;
+}
+.share-google:hover:before {
+    background-color: #cc3a2b;
+    border-color: #cc3a2b;
+}
+
+@media screen and (max-width:480px){
+  .product-wrap .share-buttons-item:before {
+    padding: 15px 25px;
+  }
+}
+
+/* Consumable section */
+.product-recommendations {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.product-recommendations h2 {
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.product-recommendations ul {
+  display: flex;
+  column-gap: 10px;
+      overflow-x: scroll;
+}
+
+.product-recommendations li {
+  position: relative;
+  box-shadow: 0px 0px 10px 0px #d6d6d6;
+  border-radius: 5px;
+}
+
+.product-recommendations li img {
+  border-radius: 5px;
+}
+
+.product-recommendations__product-info {
+  position: absolute;
+  top: 0;
+  background: #000;
+  color: #fff;
+  width: 200px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 5px;
+  height:100%;
+}
+.product-recommendations__product-img {
+    width: 200px;
+}
+.product-recommendations li:hover .product-recommendations__product-info {
+  display: flex;
+}
+
+.product-recommendations__product-info p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.product-recommendations__product-info a {
+  color: #fff;
+  text-decoration: underline;
+  margin-top: 10px;
+}
+
+@media screen and (max-width:480px){
+  .product-recommendations li {
+    margin: 14px 10px;
+    height: 100%;
+    position: unset;
+    width:100%;
+  }
+  .product-recommendations ul {
+    display: flex;
+    column-gap: 10px;
+   justify-content: flex-start;
+    overflow-x: scroll;
+  }
+  .product-recommendations__product-img {
+    width: 240px;
+    height: 240px;
+  }
+  .product-recommendations li img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: unset;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .product-recommendations__product-info {
+    width: 100%;
+    position: unset;
+    display: block;
+    height: auto!important;
+    color: #000;
+    background: transparent;
+    padding: 20px 0;
+  }
+  p.product-recommendations__learn-more {
+    display: none;
+  }
+  .product-recommendations__product-info p {
+    padding: 5px;
+  }
+}
+
+/* Further Education */
+/* --- IN OFFICE --- */
+#in-office-training {
+    margin: auto;
+    max-width: 700px;
+}
+.in-office-training {
+    margin-top: 40px;
+}
+.section-header.text-center h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.rte {
+    line-height: 1.5;
+}
+
+.rte p {
+    padding: 0;
+}
+
+.text-center.return-link-wrapper.page-width svg {
+    width: 20px;
+    color: #554d99;
+    fill: #554d99;
+}
+
+.text-center.return-link-wrapper.page-width a {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-center.return-link-wrapper {
+    max-width: 240px;
+    border: 1px solid #554d99;
+    padding: 15px 30px;
+    border-radius: 27.5px;
+    margin-top: 40px;
+}
+
+/* ----------------- */
+.further-education {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.further-education__product-img {
+    width: 200px;
+}
+.further-education h2 {
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.further-education ul {
+  display: flex;
+  column-gap: 10px;
+  justify-content: center;
+}
+
+.further-education li {
+  position: relative;
+  box-shadow: 0 0 10px #d6d6d6;
+  border-radius: 5px;
+}
+
+.further-education li img {
+  border-radius: 5px;
+}
+
+.further-education__product-info {
+  position: absolute;
+  top: 0;
+  background: #000;
+  color: #fff;
+  width: 200px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 5px;
+  height:100%;
+}
+
+.further-education li:hover .further-education__product-info {
+  display: flex;
+}
+
+.further-education__product-info p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.further-education__product-info a {
+  color: #fff;
+  text-decoration: underline;
+  margin-top: 10px;
+}
+
+@media screen and (max-width:480px){
+  .further-education li {
+    width: 100%;
+    margin: 14px 10px;
+  }
+  .further-education__product-img {
+    width: 240px;
+    height: 240px;
+  }
+  .further-education ul {
+    display: flex;
+    column-gap: 10px;
+    justify-content: flex-start;
+    overflow-x: scroll;
+  }
+  .further-education__product-info {
+      width: 100%;
+      position: unset;
+      display: block;
+      height: auto!important;
+      color: #000;
+      background: transparent;
+      padding: 20px 0;
+  }
+  .further-education li img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: unset;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .further-education__product-info p {
+    padding: 5px;
+  }
+  .further-education__product-info p.further-education__learn-more{
+    display: none;
+  }
+}
+
+
+/* Calendly */
+.calendly-container p {
+    font-weight: bold;
+}
+
+.calendly-container {
+    margin-top: 60px;
+    border: 1px solid gainsboro;
+    padding: 40px;
+    border-radius: 40px;
+}
+
+.calendly-container .calendly-inline-widget {
+    min-height: 500px!important;
+}
+/* 
+.calendly-spinner::nth-child(2){
+  display:none;
+}
+.calendly-inline-widget iframe:nth-child(2) {
+    display: none;
+} */

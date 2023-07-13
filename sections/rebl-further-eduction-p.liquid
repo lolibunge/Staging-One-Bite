@@ -1,0 +1,35 @@
+{% if section.settings.further-education %}
+  {% include 'rebl-further-education-p' %}
+{% endif %}
+
+
+{% schema %}
+  {
+    "name": "Further Education P",
+    "settings": [
+      {
+        "type":"header",
+        "content":"Show Further Education P"
+      },
+      {
+        "type":"checkbox",
+        "id":"further-education",
+        "label":"click to show or hide Further Educations",
+        "default":true
+      }
+    ],
+    "blocks":[],
+  "presets": [
+    {
+      "category": "Further Education P",
+      "name": "Further Education P"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
