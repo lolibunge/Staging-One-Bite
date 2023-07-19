@@ -198,9 +198,36 @@
         %}
           <div class="clearfix product-form-nav">
             {% if product.variants.size > 1 %}
-              <div class="product-options">
-                {% include 'product-options-dropdown' %}
+              <div class="product-options-wrapper">
+                <div class="product-options">
 
+      {% if product.has_only_default_variant %}
+      
+      {% else %}
+          <div class="select-option__wrapper">
+            {%- for option in product.options_with_values -%}
+          <label class="selected-text" for="ProductSelect-{{ product.id }}" data-select-text="">
+            <strong>{{ option.name | escape }}: </strong> 
+            <span data-selected-option="">{{ value }}</span>
+          </label>
+        {% endfor %}
+
+         <select name="id" id="ProductSelect-{{ product.id }}" class="product-form__variants no-js single-option-selector">
+          {% for variant in product.variants %}
+            {% if variant.available %}
+              <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
+                {{ variant.title }}
+              </option>
+            {% else %}
+              <option disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
+            {% endif %}
+          {% endfor %}
+          </select>
+            
+          </div>
+
+          {% endif %}
+       
                 <div class="selector-wrapper no-js-required">
                   <select
                     class="product-select"
@@ -238,8 +265,6 @@
                 data-variant-title="{{ product.variants[0].title }}" />
             {% endif %}
 
-            <div id="infiniteoptions-container"></div>
-            <div id="uploadery-container"></div>
 
             <div class="product-form__controls-group">
               <div class="product-form__item">
@@ -274,6 +299,8 @@
                   {{ form | payment_button }}
                 {% endif %}
               </div>
+
+            <div class="product-calendly-message">*Please select a date below before proceeding to Checkout</div>
 
               <div class="product-cart-message" data-product-message></div>
             {% else %}
@@ -426,6 +453,7 @@ if (d.detected_values.country.handle == 'US'){
   console.log(e.data);
   if (e.data.event === 'calendly.event_scheduled') {
     document.getElementById("add-to-cart-button").disabled=false;
+    document.querySelector(".product-calendly-message").style.display = 'none';
   }
 });
 </script>

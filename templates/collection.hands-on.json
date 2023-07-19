@@ -1,11 +1,14 @@
 {
-    "sections": {
-      "main": {
-        "type": "hands-on-training",
-        "settings": {}
+  "sections": {
+    "main": {
+      "type": "hands-on-training",
+      "settings": {
+        "title": "Hands On Training",
+        "content": "<p>Join us at one of our courses for a full day immersive learning experience amongst like-minded professionals, led by our training and education team. Learn the importance of  taking the true position of the maxillary arch with OneBite Evolution. This course will cover philosophy, protocols, and hands-on training. This course will also include instructions on how to use the OneBite Evolution system in both analog and digital methods.<\/p>"
       }
-    },
-    "order": [
-      "main"
-    ]
-  }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
