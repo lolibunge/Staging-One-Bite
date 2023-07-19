@@ -1,0 +1,138 @@
+<div class="page-width" id="hands-on-training">
+    <div class="grid">
+      <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
+        <div class="section-header text-center">
+          <h1>{{ section.settings.title }}</h1>
+        </div>
+  
+        <div class="rte">
+          {{ section.settings.content }}
+        </div>
+  
+        <div class="hands-on-training">
+            <form method="post" action="/cart/add">
+                <input type="hidden" name="id" id="course-id" value="" />
+                {% assign countries =  collection.metafields.courses.country.value %}
+                {% assign states = collection.metafields.courses.states.value %}
+                {% assign courses = collection.metafields.courses.courses.value %}
+                
+                <p class="line-item-property__field">
+                  <label>Country</label><br>
+                  <select required class="required" id="country" name="properties[Country]">
+                    <option value="">Select a Country</option>
+                    {% for country in countries %}
+                      <option value="{{ country }}">{{ country }}</option>
+                    {% endfor %}
+                  </select>
+                </p>
+                
+                <p class="line-item-property__field">
+                  <label>State</label><br>
+                  <select required class="required" id="state" name="properties[State]">
+                    <option value="">Select a State</option>
+                    {% for state in states %}
+                      <option value="{{ state }}">{{ state }}</option>
+                    {% endfor %}
+                  </select>
+                </p>
+                
+                <p class="line-item-property__field">
+                  <label>Courses</label><br>
+                  <select required class="required" id="courses" name="properties[Courses]" onchange="setCourseId(this)">
+                    <option value="">Select a Course</option>
+                    {% for course in courses %}
+                      <option value="{{ course.variants[0].id }}">{{ course.title }} - {{ course.price | money }}</option>
+                    {% endfor %}
+                  </select>
+                </p>
+              
+                <div id="selected-product-info"></div>
+              
+                <input type="submit" value="Add to cart" class="button add-to-cart-button inverse" />
+              </form>
+              
+              <script>
+                function setCourseId(selectElement) {
+                  var variantId = selectElement.value;
+                  document.getElementById('course-id').value = variantId;
+                  var course = fetchCourseData(variantId);
+                  if (course) {
+                    displayCourseInfo(course);
+                  }
+                }
+              
+                function fetchCourseData(variantId) {
+                  var courses = {{ courses | json | strip_newlines }};
+                  var course = courses.find(function(course) {
+                    return course.variants.some(function(variant) {
+                      return variant.id.toString() === variantId;
+                    });
+                  });
+                  return course;
+                }
+              
+                function formatCurrency(price) {
+                  var formattedPrice = parseFloat(price).toFixed(2);
+                  return '$' + formattedPrice / 100 + ',00';
+                }
+              
+                function displayCourseInfo(course) {
+                  var productInfoElement = document.getElementById('selected-product-info');
+                  var formattedPrice = formatCurrency(course.variants[0].price);
+                  var imageSrc = course.image && course.image.src ? course.image.src : '';
+                  var imageAlt = course.image && course.image.alt ? course.image.alt : '';
+                  productInfoElement.innerHTML = `
+                    <p>Selected Product:</p>
+                    <h2>${course.title}</h2>
+                    <p>${course.description}</p>
+                    <p> ${formattedPrice}</p>
+                    <img src="${imageSrc}" alt="${imageAlt}" />
+                  `;
+                }
+              </script>
+
+              
+              
+            
+        </div>
+  
+        {% if pages %}
+        <div class="text-center return-link-wrapper page-width">
+          <a href="javascript&colon;history.go(-1)" class="btn btn--secondary btn--has-icon-before return-link">
+            {% include 'icon-arrow-left' %}
+            Back to product page
+          </a>
+        </div>
+      {% endif %}
+  
+      </div>
+    </div>
+  </div>
+
+
+  {% schema %}
+  {
+    "name": "Hands On Training",
+    "class": "hands-on-training-section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+        }
+    ],
+    "presets": [
+      {
+        "name": "Hands On Training",
+        "category": "hands-on-training"
+        
+      }
+    ]
+  }
+  
+  {% endschema %}

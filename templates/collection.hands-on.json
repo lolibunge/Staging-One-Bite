@@ -1,0 +1,11 @@
+{
+    "sections": {
+      "main": {
+        "type": "hands-on-training",
+        "settings": {}
+      }
+    },
+    "order": [
+      "main"
+    ]
+  }

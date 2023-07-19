@@ -667,6 +667,20 @@
           "button_text": "",
           "button_link": ""
         }
+      },
+      "in-office-training": {
+        "type": "in-office-training",
+        "settings": {
+          "title": "In Office Traning",
+          "content": "<p>Allow us to come to you. A certified advisor will join you and your team in your practice for a day of education. We will do a hands-on demonstration with one of your patients for you to learn how to operate the OneBite Evolution System and create an analog or digital protocol to ensure you provide your dental laboratory with the true position of the maxillary arch record.<\/p>"
+        }
+      },
+      "hands-on-training": {
+        "type": "hands-on-training",
+        "settings": {
+          "title": "Hands On Training",
+          "content": "<p>Join us at one of our courses for a full day immersive learning experience amongst like-minded professionals, led by our training and education team. Learn the importance of  taking the true position of the maxillary arch with OneBite Evolution. This course will cover philosophy, protocols, and hands-on training. This course will also include instructions on how to use the OneBite Evolution system in both analog and digital methods.<\/p>"
+        }
       }
     },
     "content_for_index": [

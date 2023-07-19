@@ -1,0 +1,93 @@
+<div class="page-width" id="hands-on-training">
+    <div class="grid">
+      <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
+        <div class="section-header text-center">
+          <h1>{{ section.settings.title }}</h1>
+        </div>
+  
+        <div class="rte">
+          {{ section.settings.content }}
+        </div>
+  
+        <div class="hands-on-training">
+            <form method="post" action="/cart/add">
+                {% assign countries =  product.metafields.courses.countries.value %}
+                  {% assign states = product.metafields.courses.states.value %}
+                  {% assign courses = product.metafields.courses.courses.value %}
+              
+                
+                <p class="line-item-property__field">
+                  <label>Country</label><br>
+                  <select required class="required" id="country" name="properties[Country]">
+                    <option value="">Select a Country</option>
+                     {% for country in countries %}
+                        <option value="{{ country }}">{{ country }}</option>
+                    {% endfor %}
+                  </select>
+                </p>
+                
+                <p class="line-item-property__field">
+                  <label>State</label><br>
+                  <select required class="required" id="state" name="properties[State]">
+                    <option value="">Select a State</option>
+                    {% for state in states %}
+                        <option value="{{ state }}">{{ state }}</option>
+                    {% endfor %}
+                  </select>
+                </p>
+                
+                <p class="line-item-property__field">
+                  <label>Courses</label><br>
+                  <select required class="required" id="courses" name="properties[Courses]">
+                    <option value="">Select a Course</option>
+                    {% for course in courses %}
+                        <option value="{{ course.title }}">{{ course.title }}</option>
+                    {% endfor %}
+                  </select>
+                </p>
+
+                <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+    
+                <input type="submit" value="Add to cart" class="button add-to-cart-button inverse" />
+            </form>
+        </div>
+  
+        {% if pages %}
+        <div class="text-center return-link-wrapper page-width">
+          <a href="javascript&colon;history.go(-1)" class="btn btn--secondary btn--has-icon-before return-link">
+            {% include 'icon-arrow-left' %}
+            Back to product page
+          </a>
+        </div>
+      {% endif %}
+  
+      </div>
+    </div>
+  </div>
+
+
+{% schema %}
+{
+    "name": "Hands On Training",
+    "tag": "section",
+    "class": "hands-on-training-section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+        }
+    ],
+    "presets": [
+        {
+        "category": "Hands On Training",
+        "name": "Hands On Training"
+        }
+    ]
+}
+{% endschema %}
