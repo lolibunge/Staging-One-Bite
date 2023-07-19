@@ -151,4 +151,15 @@
       </div>
     </div>
   </a>
+  <div class="product-title">
+    <a class="list-container" href="{{ item_url }}">
+    {% unless onboarding %}
+      {{ item.title }}
+    {% else %}
+      {{ onboarding_title }}
+    {% endunless %}
+      </a>
+  </div>
 </div>
+
+

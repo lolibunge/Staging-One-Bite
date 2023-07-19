@@ -22,8 +22,15 @@
         "consumables": true
       }
     },
+    "3bb82388-05a5-4e97-a678-617fd4001d7d": {
+      "type": "rebl-further-education-p",
+      "settings": {
+        "further-education": true
+      }
+    },
     "9374f81e-bcb2-4804-890d-8cd487ce9858": {
       "type": "rebl-further-education",
+      "disabled": true,
       "blocks": {
         "6b63ba82-4d22-42a8-ae4c-dceb6d5578c8": {
           "type": "slide",
@@ -31,7 +38,7 @@
             "title": "In-Office",
             "image": "shopify:\/\/shop_images\/In-OfficeTechnicianSystem.jpg",
             "text-link": "Learn More",
-            "link": "shopify:\/\/pages\/in-office-training"
+            "link": "shopify:\/\/products\/in-office-clinician-system"
           }
         },
         "750432d2-1f3b-4604-87c2-eba3f735706e": {
@@ -56,6 +63,7 @@
   "order": [
     "main",
     "a12af894-cb21-49d8-bab8-7fac5854a693",
+    "3bb82388-05a5-4e97-a678-617fd4001d7d",
     "9374f81e-bcb2-4804-890d-8cd487ce9858"
   ]
 }

@@ -45,6 +45,10 @@
     color: #ffffff;
 }
 
+.kit-collection .collection-list .product-title {
+  font-size: 20px;
+}
+
 .kit-collection .list-meta {
     color: #ffffff;
 }
@@ -64,6 +68,12 @@
   }
 }
 /* ----------------- PRODUCT PAGE ---------------- */
+/* DISABLE ADD TO CART */
+input#add-to-cart-button[disabled] {
+  background: #d0ccf4;
+}
+
+
 /* Social Share */
 .share-buttons-item {
     position: relative;
@@ -243,44 +253,93 @@
     margin: auto;
     max-width: 700px;
 }
-.in-office-training {
+div#in-office-training .in-office-training {
     margin-top: 40px;
 }
-.section-header.text-center h1 {
+div#in-office-training .section-header.text-center h1 {
     font-size: 36px;
     text-align: center;
 }
 
-.rte {
+div#in-office-training .rte {
     line-height: 1.5;
 }
 
-.rte p {
+div#in-office-training .rte p {
     padding: 0;
-}
-
-.text-center.return-link-wrapper.page-width svg {
-    width: 20px;
-    color: #554d99;
-    fill: #554d99;
-}
-
-.text-center.return-link-wrapper.page-width a {
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.text-center.return-link-wrapper {
-    max-width: 240px;
-    border: 1px solid #554d99;
-    padding: 15px 30px;
-    border-radius: 27.5px;
-    margin-top: 40px;
+  font-size: 16px;
+  text-align: center;
 }
 
 /* ----------------- */
+
+/* --- HANDS ON --- */
+#hands-on-training {
+  margin: auto;
+  max-width: 700px;
+}
+div#hands-on-training .hands-on-training {
+  margin-top: 40px;
+  font-size: 16px;
+}
+div#hands-on-training .section-header.text-center h1 {
+  font-size: 36px;
+  text-align: center;
+}
+
+div#hands-on-training .rte {
+  line-height: 1.5;
+}
+
+div#hands-on-training .rte p {
+  padding: 0;
+font-size: 16px;
+text-align: center;
+}
+
+div#hands-on-training select {
+  width: 100%;
+  padding: 15px 10px;
+}
+
+div#hands-on-training div#selected-product-info {
+  line-height: 1.5;
+}
+
+div#hands-on-training div#selected-product-info p {
+  padding: 0;
+}
+div#hands-on-training div#selected-product-info h2 {
+  font-size: 28px;
+  margin-top: 20px;
+}
+/* ----------------- */
+
+/* RETURN LINK */
+.text-center.return-link-wrapper.page-width svg {
+  width: 20px;
+  color: #554d99;
+  fill: #554d99;
+}
+
+.text-center.return-link-wrapper.page-width a {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+.text-center.return-link-wrapper {
+  max-width: 240px;
+  border: 1px solid #554d99;
+  padding: 15px 30px;
+  border-radius: 27.5px;
+  margin-top: 40px;
+}
+/* ----------- */
+
+/* ---- FURTHER EDUCATION ---- */
 .further-education {
   max-width: 1000px;
   margin: auto;
@@ -290,6 +349,13 @@
 
 .further-education__product-img {
     width: 200px;
+    height: 350px;
+}
+
+.further-education__product-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .further-education h2 {
     font-size: 28px;
@@ -382,6 +448,18 @@
   }
 }
 
+/* ---- CART PAGE ---- */
+span.cart-item-property {
+  font-size: 14px;
+  display: flex;
+}
+
+span.cart-item-property__first {
+  font-weight: 700;
+  margin-right: 5px;
+}
+/* ------------------ */
+
 
 /* Calendly */
 .calendly-container p {
@@ -389,19 +467,48 @@
 }
 
 .calendly-container {
-    margin-top: 60px;
-    border: 1px solid gainsboro;
-    padding: 40px;
-    border-radius: 40px;
-}
+  margin-top: 60px;
+  border: 1px solid gainsboro;
+  padding: 40px;
+  border-radius: 40px;
+  min-height: 500px!important;
+  height: fit-content;
+} 
 
-.calendly-container .calendly-inline-widget {
-    min-height: 500px!important;
+@media screen and (max-width:768px){
+
+  /* Porduct page */
+  /* social share */
+  .product-wrap .share-buttons-item:before {
+    padding: 7px 15px;
+    font-size: 14px;
+  }
+  /* ------------ */
+
+  /* calendly container */ 
+  .calendly-container {
+    padding: 10px!important;
+  }
+  .calendly-inline-widget.calendly-mobile {
+    width: 300px!important;
+  }
+  /* ------------ */
+  
+  /* In office training */
+  
+  #in-office-training {
+      max-width: unset;
+      width: 90%;
+      margin: 20px auto;
+  }
+  /* ------------------ */
+
+  /* In office training */
+  
+  #hands-on-training {
+      max-width: unset;
+      width: 90%;
+      margin: 20px auto;
+  }
+  /* ------------------ */
 }
-/* 
-.calendly-spinner::nth-child(2){
-  display:none;
-}
-.calendly-inline-widget iframe:nth-child(2) {
-    display: none;
-} */

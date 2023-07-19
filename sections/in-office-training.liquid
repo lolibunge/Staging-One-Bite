@@ -1,0 +1,84 @@
+<div class="page-width" id="in-office-training">
+  <div class="grid">
+    <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
+      <div class="section-header text-center">
+        <h1>{{ section.settings.title }}</h1>
+      </div>
+
+      <div class="rte">
+        {{ section.settings.content }}
+      </div>
+
+      <div class="in-office-training">
+        <form method="post" action="/cart/add">
+            <p class="line-item-property__field">
+                <label for="name">Name</label>
+                <input required id="name" type="text" name="properties[Name]">
+            </p>
+
+            <p class="line-item-property__field">
+                <label for="address">Address</label>
+                <input required id="address" type="text" name="properties[Address]">
+            </p>
+
+
+            <p class="line-item-property__field">
+                <label for="phone-number">Phone Number</label>
+                <input required id="phone-number" type="text" name="properties[Phone Number]">
+            </p>
+
+            <p class="line-item-property__field">
+                <label for="email">Email</label>
+                <input required id="email" type="text" name="properties[Email]">
+            </p>
+
+            <p class="line-item-property__field">
+                <label for="message">Message</label>
+                <textarea id="message" name="properties[Message]"></textarea>
+            </p>
+
+            <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+
+            <input type="submit" value="Add to cart" class="button add-to-cart-button inverse" />
+        </form>
+      </div>
+
+      {% if pages %}
+      <div class="text-center return-link-wrapper page-width">
+        <a href="javascript&colon;history.go(-1)" class="btn btn--secondary btn--has-icon-before return-link">
+          {% include 'icon-arrow-left' %}
+          Back to product page
+        </a>
+      </div>
+    {% endif %}
+
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+    "name": "In Office Training",
+    "tag": "section",
+    "class": "in-office-training-section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+        }
+    ],
+    "presets": [
+        {
+        "category": "In Office Training",
+        "name": "In Office Training"
+        }
+    ]
+}
+{% endschema %}

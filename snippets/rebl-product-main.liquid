@@ -241,16 +241,17 @@
             <div id="infiniteoptions-container"></div>
             <div id="uploadery-container"></div>
 
-            <div class="number-input-wrapper product-quantity clearfix">
-              <div class="number-input-field">
-                <input type="number" name="quantity" id="quantity" value="1" aria-label="{{ "general.general.quantity" | t }}" />
-                <label class="number-input-label" for="quantity">{{ 'general.general.quantity' | t }}</label>
-              </div>
-              <div class="number-input-nav">
-                <div class="number-input-nav-item icon icon-plus"></div>
-                <div class="number-input-nav-item icon icon-minus"></div>
+            <div class="product-form__controls-group">
+              <div class="product-form__item">
+               
+            <select name="quantity" id="quantity">
+                  {% for i in (1..10) %}
+                            <option value="{{ i }}">{{ i }}</option>
+                    {% endfor %}         
+            </select>
               </div>
             </div>
+            
           </div>
           <div class="add-to-cart clearfix">
             {% if product.available %}
@@ -264,6 +265,7 @@
                     "
                     type="submit"
                     value="{{ add_to_cart_button | strip_newlines | strip_html | strip }}"
+                    disabled="true"
                   />
                   <div class="add-to-cart-loader"></div>
                 </div>
@@ -348,33 +350,51 @@
         </a>
       {% endif %}
 
-      {% capture customer_location %}
-      {% form 'customer_info' %}
-        {{ form | geo_ip }}
-      {% endform %}
-    {% endcapture %}
-    
-    {% if customer_location contains 'United States' %}
-      <!-- Liquid code for customers from the US -->
-      <div class="calendly-container">
-        <h2>Zoom Training</h2>
-        <p>{{ section.settings.calendly-description }}</p>
-      <!-- Calendly inline widget begin -->
-      <div class="calendly-inline-widget" data-url="https://calendly.com/onebiteevolution/30-minutes-us" style="min-width:320px;height:700px;"></div>
-      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-      <!-- Calendly inline widget end -->
-      </div>
-    {% else %}
-      <!-- Liquid code for customers outside the US -->
-    <!-- Calendly inline widget begin -->
-      <div class="calendly-container">
-        <h2>Zoom Training</h2>
-        <p>{{ section.settings.calendly-description }}</p>
-    <div class="calendly-inline-widget" data-url="https://calendly.com/onebiteevolution/some-thing" style="min-width:320px;height:700px;"></div>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    <!-- Calendly inline widget end -->
-      </div>
-    {% endif %}
+      
+<div class="calendly-container">
+  
+<script>
+jQuery.get('/browsing_context_suggestions.json', (d) => { 
+if (d.detected_values.country.handle == 'US'){
+
+	document.getElementById("us-country").setAttribute('style', 'display: block;');
+
+}else{
+	document.getElementById("not-us-country").setAttribute('style', 'display: block;');
+}
+});
+</script>
+
+<div id="us-country">
+  <h2>Zoom Training</h2>
+  <p>{{ section.settings.calendly-description }}</p>
+<!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/onebiteevolution/30-minutes-us" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
+</div>
+
+<div id="not-us-country">
+<!-- Calendly inline widget begin -->
+      
+<h2>Zoom Training</h2>
+<p>{{ section.settings.calendly-description }}</p>
+<div class="calendly-inline-widget" data-url="https://calendly.com/onebiteevolution/some-thing" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
+</div>
+
+  </div>
+
+  <style>
+    div#us-country {
+      display: none;
+    }
+
+    div#not-us-country {
+      display: none;
+    }
+  </style>
 
       {% if section.settings.enable-share-buttons and is_featured != true %}
         {%
@@ -399,40 +419,13 @@
   <a href="/checkout">{{ 'products.product.checkout_link' | t }}</a>
 {%- endcapture -%}
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  var addToCartButton = document.getElementById('add-to-cart-button');
-  addToCartButton.disabled = true; // Disable the button by default
 
-  Calendly.initInlineWidget({
-    url: 'https://calendly.com/onebiteevolution/30min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=554d99',
-    parentElement: document.querySelector('.calendly-inline-widget'),
-    prefill: {},
-    onDateSelected: function(date) {
-      addToCartButton.disabled = false; // Enable the "Add to Cart" button
-    },
-    onDateError: function() {
-      addToCartButton.disabled = true; // Disable the "Add to Cart" button
-    }
-  });
+<script>
+
+  window.addEventListener('message', function(e) {
+  console.log(e.data);
+  if (e.data.event === 'calendly.event_scheduled') {
+    document.getElementById("add-to-cart-button").disabled=false;
+  }
 });
 </script>
-
-
-
-<script type="application/json" data-product-settings-{{ form_id }}>
-  {
-    "addToCartText": {{ add_to_cart_button | strip_newlines | strip_html | strip | json }},
-    "cartRedirect": {{ section.settings.enable_cart_redirect }},
-    "enableHistory": true,
-    "imageZoom": {{ section.settings.enable_zoom }},
-    "linkedOptions": true,
-    "processingText": {{ 'products.product.processing' | t | json }},
-    "setQuantityText": {{ 'products.product.set_quantity' | t | json }},
-    "soldOutText": {{ 'products.product.sold_out' | t | json }},
-    "successMessage": {{ 'products.product.success_html' | t: cart_link: cart_link, continue_link: continue_link, checkout_link: checkout_link | json }},
-    "unavailableText": {{ 'products.product.unavailable' | t | json }}
-  }
-</script>
-
-<script type="application/json" data-product-json-{{ form_id }}>{{ product | json }}</script>
